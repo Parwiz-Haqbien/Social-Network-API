@@ -3,7 +3,7 @@ const moment = require('moment');
 
 const reactionSchema = new Schema (
     {   
-        reactId: {
+        reactionId: {
         type: Schema.Types.ObjectId,
         default: () => new Types.ObjectId
         },
@@ -59,7 +59,7 @@ const thoughtSchema = new Schema (
     },
     {
         toJSON: {
-            virtual: true,
+            virtuals: true,
             getters: true
         },
             id: false
