@@ -1,6 +1,6 @@
 const { User } = require('../models')
 
-const userCon = {
+const userController = {
     getAllUsers(req,res) {
         User.find({})
         .populate({
@@ -47,7 +47,7 @@ const userCon = {
          )
          .then(dbUserData => {
              if (!dbUserData) {
-                 res.status(404).json({ message: 'No user found with this ID!' });
+                 res.status(404).json({ message: 'user was not found with this ID!' });
                  return;
              }
              res.json(dbUserData);
@@ -91,4 +91,4 @@ const userCon = {
      
 };
 
-module.exports = userCon
+module.exports = userController

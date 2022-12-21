@@ -1,7 +1,6 @@
-const {Thought, User} = require('../models');
+const { Thought, User } = require('../models');
 
-
-const thoughtCon = {
+const thoughtController = {
     getAllThoughts(req, res) {
         Thought.find({})
         .populate({
@@ -104,4 +103,4 @@ const thoughtCon = {
     }
 };
 
-module.exports = thoughtCon
+module.exports = thoughtController
